@@ -1,2 +1,4 @@
-# nim-ncurses
-A Nim language wrapper for NCurses
+# nncurses
+A Nim language wrapper for NCurses.
+
+Forked from Raymond Nowley.
