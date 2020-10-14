@@ -81,7 +81,7 @@ const
   NCURSES_ATTR_SHIFT = 8
 template NCURSES_CAST(`type`, value: untyped): untyped = (`type`)(value)
 template NCURSES_BITS(mask, shift: untyped): untyped =
-  (NCURSES_CAST(chtype, (mask)) shl ((shift) + NCURSES_ATTR_SHIFT))
+  (NCURSES_CAST(chtype, (((mask)) shl ((shift) + NCURSES_ATTR_SHIFT)) and uint64(chtype.high())) )
 
 #color: color manipulation routines
 const
